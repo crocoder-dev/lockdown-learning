@@ -61,3 +61,11 @@ function sayHelloToName() {
   const nameElement = document.querySelector('#name');
   return sayHello(nameElement.value);
 }
+
+
+function saySomethingToMe(name, text = 'who are you?') {
+  const something = `Hey ${name}, ${text}`
+  return something;
+}
+
+const result = saySomethingToMe('David', 'teach JavaScript faster!');
