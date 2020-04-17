@@ -23,3 +23,6 @@ addNewImage();
 addNewImage();
 addNewImage();
 addNewImage();
+addNewImage();
+addNewImage();
+addNewImage();
