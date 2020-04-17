@@ -27,7 +27,7 @@ function addNumbers(a, b) {
 }
 
 
-const result = addNumbers(2, 3);
+let result = addNumbers(2, 3);
 
 console.log(result);
 
@@ -68,4 +68,4 @@ function saySomethingToMe(name, text = 'who are you?') {
   return something;
 }
 
-const result = saySomethingToMe('David', 'teach JavaScript faster!');
+result = saySomethingToMe('David', 'teach JavaScript faster!');
