@@ -1,3 +1,29 @@
-// Write a function that creates img elements that have a random image from source.unsplash (example: https://source.unsplash.com/random/300x300)
+function addNewImage() {
+  const imageElement = document.createElement('img');
+  const rand = Math.floor((Math.random() * 400) + 100);
+  imageElement.src = `https://source.unsplash.com/random/${rand}x${rand}`;
+  imageElement.onmouseenter = changeSize;
+  document.body.appendChild(imageElement);
+}
 
-// Make it so that every time mouse enters the image it reloads some other image
+function changeSize(event) {
+  const rand = Math.floor((Math.random() * 400) + 100);
+  event.target.src = `https://source.unsplash.com/random/${rand}x${rand}`;
+}
+
+addNewImage();
+addNewImage();
+addNewImage();
+addNewImage();
+addNewImage();
+addNewImage();
+addNewImage();
+addNewImage();
+addNewImage();
+addNewImage();
+addNewImage();
+addNewImage();
+addNewImage();
+addNewImage();
+addNewImage();
+>>>>>>> development
