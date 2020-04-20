@@ -42,4 +42,3 @@ function createNewPerson() {
 
 const commitElement = document.querySelector('#commit');
 commitElement.onclick = createNewPerson;
->>>>>>> development

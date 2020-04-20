@@ -26,4 +26,3 @@ addNewImage();
 addNewImage();
 addNewImage();
 addNewImage();
->>>>>>> development
