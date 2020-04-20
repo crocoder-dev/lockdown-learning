@@ -1,1 +1,22 @@
 /** Write CSS rules here **/
+
+.wrapper {
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Apply styles to .card */
+.card {
+  border: 1px solid var(--card-border);
+  border-radius: 5px;
+  display: inline-block;
+  margin: 10px;
+  overflow: hidden;
+  height: 450px;
+  width: 290px;
+}
+
+/* Apply styles to .card__content that are direct children. */
+.card > .card__content {
+  padding: 10px;
+}

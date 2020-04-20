@@ -1,1 +1,49 @@
 /** Write CSS rules here **/
+
+/* Wrapper that holds content on the index page.
+  Right content is the image and left content are
+  the text, input and button elements.
+*/
+.content {
+  display: inline-block;
+}
+
+/* Used to select the content without the image */
+.text {
+  box-sizing: border-box;
+  padding-right: 30px;
+  text-align: right;
+  width: 450px;
+}
+
+/* Used to select the img element inside the right content. */
+.pancake_image {
+  box-sizing: border-box;
+  height: 500px;
+  vertical-align: middle;
+  width: 500px;
+}
+
+/* Parent of both containers */
+.wrapper {
+  margin: auto;
+  width: 960px;
+}
+
+/* Submit button */
+button {
+  background-color: var(--secondary-dark);
+  border: 2px solid var(--secondary-dark);
+  color: var(--white);
+  font-weight: 700;
+}
+
+/* Input */ 
+input {
+  background-color: var(--input-background);
+  border-color: var(--input-background);
+  border-style: solid;
+  color: black;
+  padding-left: 10px;
+  width: 250px;
+}

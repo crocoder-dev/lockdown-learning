@@ -1,0 +1,65 @@
+/** The base.css file includes all styles we want to share across pages. **/
+
+/** Defines the scope of variables */
+:root {
+  --primary-dark: #4a138c;
+  --primary: #7c42bd;
+  --primary-light: #B39DDB;
+
+  --secondary: #00acc1;
+  --secondary-dark: #007c91;
+
+  --white: #fff;
+
+  --input-background: #EDE7F6;
+  --card-border: #CFD8DC;
+}
+
+/** Element selector **/
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 16px;
+  font-weight: 400; /* Equal to default (or "normal") thickness */
+  margin: 0;
+}
+
+/** Element selector **/
+nav {
+  background-color: var(--primary-dark);
+  color: #fff; /* This is equivalent to writing #ffffff */
+}
+
+/** Class selector **/
+.logo {
+  border-radius: 50%;
+  height: 50px;
+  margin: 10px 0 10px 20px;
+  vertical-align: middle;
+  width: 50px;
+}
+
+/* Select all a inside of nav and apply style to them */
+nav a {
+  color: var(--white);
+  font-weight: 700;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+/* Select all a inside of nav, that are hovered, and apply style to them */
+nav a:hover {
+  color: var(--primary-light);
+}
+
+
+/* Title */
+h1 {
+  color: var(--primary-dark);
+  margin-bottom: 0;
+}
+
+/* Subtitle */
+h4 {
+  color: var(--primary);
+  margin-top: 0;
+}
