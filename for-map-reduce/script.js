@@ -133,3 +133,11 @@ console.log(averageToppings);
 const averageToppingsOnCheesePizzas = pizzas.filter(hasCheese).map(getNumberOfToppings).reduce(calculateAverageToppings);
 
 console.log(averageToppingsOnCheesePizzas);
+
+for (let index = 0; index < pizzas.length; index++) {
+  console.log(index, pizzas[index].name);
+}
+
+for (const pizza of pizzas) {
+  console.log(pizza.name);
+}
