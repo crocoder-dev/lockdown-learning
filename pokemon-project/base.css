@@ -28,6 +28,7 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  text-decoration: none;
 }
 
 .pokemon > img {
@@ -69,12 +70,52 @@
   padding: 7.5px;
 }
 
-.details {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.2);
-  z-index: 20;
+.details-wrapper {
+  display: flex;
+  width: 40%;
+  justify-content: space-between;
+  align-content: center;
+  flex-wrap: wrap;
+  background-color: white;
+  flex-direction: column;
+  padding: 30px;
+}
+
+.details-wrapper > img {
+  height: 90px;
+  width: 90px;
+  align-self: center;
+}
+
+.details-wrapper > div {
+  padding: 10px;
+}
+
+.details-wrapper > .stats {
+  font-size: 32px;
+  text-align: center;
+}
+
+.details-wrapper > .name {
+  font-size: 42px;
+  text-align: center;
+}
+
+.details-wrapper > .number {
+  font-size: 42px;
+  text-align: center;
+}
+
+.details-wrapper > .types {
+  align-self: center;
+}
+
+.details-wrapper > .types > span {
+  font-size: 20px;
+  padding: 5px;
+  margin: 10px;
+  border-radius: 10px;
+  border: 4px solid #000;
+  color: white;
+  font-weight: 700;
 }

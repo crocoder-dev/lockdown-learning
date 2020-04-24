@@ -1,24 +1,3 @@
-const colors = {
-  Grass: '#78C850',
-  Poison: '#A040A0',
-  Fire: '#F08030',
-  Flying: '#A890F0',
-  Water: '#6890F0',
-  Bug: '#A8B820',
-  Normal: '#A8A878',
-  Electric: '#F8D030',
-  Ground: '#E0C068',
-  Fairy: '#EE99AC',
-  Fighting: '#C03028',
-  Psychic: '#F85888',
-  Rock: '#B8A038',
-  Ice: '#E0C068',
-  Dragon: '#7038F8',
-  Dark: '#705848',
-  Steel: '#B8B8D0',
-  Ghost: '#705898',
-};
-
 const getBackground = (type) => type.length === 2 ? `linear-gradient(0.625turn, ${colors[type[0]]} 50%, ${colors[type[1]]} 50% 100%)` : colors[type[0]]
 
 const wrapperElement = document.querySelector('#app > .wrapper')
@@ -43,9 +22,9 @@ const initSearchBox = () => {
 
 const createPokemonList = () => {
   pokemon.forEach((p, i) => {
-    const pokemonElement = document.createElement('div');
+    const pokemonElement = document.createElement('a');
     pokemonElement.classList.add('pokemon');
-    pokemonElement.dataset.id = i;
+    pokemonElement.href = `./details.html?pokemon=${i}`;
     pokemonElement.style.background = getBackground(p.type);
   
     const pokemonImageElement = document.createElement('img');
