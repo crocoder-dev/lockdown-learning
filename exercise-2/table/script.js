@@ -4,7 +4,6 @@ function deletePerson(event) {
 }
 
 function createNewPerson() {
-
   const nameElement = document.querySelector('#name');
   const surnameElement = document.querySelector('#surname');
   const ageElement = document.querySelector('#age');
@@ -25,7 +24,6 @@ function createNewPerson() {
   removeButtonElement.onclick = deletePerson;
 
   removeTdElement.appendChild(removeButtonElement);
-
 
   trElement.appendChild(nameTdElement);
   trElement.appendChild(surnameTdElement);
