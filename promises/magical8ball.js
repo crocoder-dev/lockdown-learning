@@ -10,7 +10,6 @@ const answers = [
   'Very doubtful',
 ];
 
-
 export function ask(question, callback) {
 
   const doesWork = Math.random() >= 0.5;

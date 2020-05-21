@@ -1,3 +1,4 @@
+
 /*
 const person = {
     name: 'David',
@@ -29,9 +30,11 @@ class Person {
     greet() {
         return `${this.name} says hello. I.m ${this.age}.`;
     }
+
 }
 
 class Coder extends Person {
+
 
     constructor(name, surname, age, favoriteLang) {
         super(name, surname, age);
@@ -46,3 +49,4 @@ const david = new Coder ('David', 'Abram', 30, 'JavaScript');
 const john = new Person ('John', 'Smith', 35);
 
 console.log(david.greet(), david.sayLang(), john.greet());
+

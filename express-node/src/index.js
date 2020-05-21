@@ -1,41 +1,66 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const app = express();
+const multer = require('multer');
 
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, 'public/')
+  },
+  filename: (req, file, cb) => {
+    cb(null, file.originalname)
+  }
+})
+ 
+const upload = multer({ storage: storage })
+
+
+const app = express();
 
 app.use(bodyParser.json());
 
-app.get('/', (req, res) => {
-   res.send('Hello World');
+app.use(express.static('public'));
+
+app.post('/upload', upload.single('image'), (req, res) => {
+  res.send('Uploaded!');
 });
 
-app.post('/', (req, res) => {
-  res.send('You have just POSTed in the wrong neighbourhood.')
+app.get('/', (req, res) => {
+  console.log('Hello!')
+  res.send('GET request to homepage');
+});
+
+app.get('/users', (req, res) => {
+  res.send([
+    {
+      name: 'David',
+      surname: 'Abram',
+    }
+  ]);
+});
+
+app.get('/users/:id', (req, res) => {
+  res.send({
+    id: req.params.id,
+    name: 'David',
+    surname: 'Abram',
+    query: req.query,
+  })
 });
 
 app.all('/get-*', (req, res) => {
-  res.send(`url is ${req.url} and method called is ${req.method}`);
-});
-
-app.get('/users/:userId/pets/:petId', (req, res) => {
-  res.send(req.params);
+  res.send(`This is ${req.url} and is called by ${req.method}`);
 });
 
 app.post('/users', (req, res) => {
-  console.log(req.body.a)
-  res.send(req.body);
+  res.send({ number: Number(req.body.a) * Number(req.body.b)});
 });
 
-/*
-fetch('http://localhost:8000/users', { method: 'POST', headers: { 'Content-Type': 'application/json'}, body: JSON.stringify({a : 3}))
-  .then(response => response.text()})
-  .then(data => console.log(data));
-*/
-
-/*fetch('http://localhost:8000/users', { method: 'POST', headers: { 'Content-Type': 'application/json'}, body: JSON.stringify({a : 3}) })
-  .then(response => response.text())
-  .then(data => console.log(data));*/
-
-app.listen(8000, () => {
-   console.log(`App running at http://localhost:8000`);
+app.get('/*', (req, res) => {
+  res.send('Nothing here');
 });
+
+app.listen(3000, () => {
+  console.log('Hello, my server has started!')
+});
+
+
