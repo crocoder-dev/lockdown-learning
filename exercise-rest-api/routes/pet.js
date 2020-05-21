@@ -1,59 +1,71 @@
-let id = 2;
+const db = require('../db');
 
-let pets = [
-  {
-    id: 1,
-    ownerId: 1,
-    name: 'Thor',
-    species: 'Cat'
-  },
-  {
-    id: 2,
-    ownerId: 1,
-    name: 'Rea',
-    species: 'Cat'
-  }
-];
 
 const readPets = () => {
-  return pets;
-}
-
-const readPetByOwnerId = (ownerId) => {
-  return pets.filter(pet => pet.ownerId === ownerId);
+  return db.read().pets.value;
 }
 
 const readPetById = (id) => {
-  return pets.find(pet => pet.id === id);
+  return db.read().pets.value.find(pet => pet.id === id);
+}
+
+
+const readPetByOwnerId = (ownerId, data = null) => {
+  if (data) {
+    return data.pets.value.filter(pet => pet.ownerId === ownerId);
+  } else {
+    return db.read().pets.value.filter(pet => pet.ownerId === ownerId);
+  }
 }
 
 const deletePetById = (id) => {
-  pets = pets.filter(pet => pet.id !== id);
+  const data = db.read();
+  data.pets.value = data.pets.value.filter(pet => pet.id !== id);
+  db.save(data);
 }
 
 const createPet = (name, species, ownerId) => {
+  const data = db.read();
+
   const newPet = {
-    id: ++id,
+    id: ++data.pets.id,
     name,
     species,
     ownerId,
   }
-  pets.push(newPet);
+  data.pets.value.push(newPet);
+  db.save(data);
   return newPet;
 }
 
 const createPets = (newPets) => {
-  return newPets.map(newPet => createPet(newPet));
+  return newPets.map(newPet => createPet(newPet.name, newPet.species, newPet.ownerId));
 };
 
 const updatePet = (id, name, species, ownerId) => {
-  const pet = pets.find(pet => pet.id === id);
+  const data = db.read();
+  const pet = data.pets.value.find(pet => pet.id === id);
 
   pet.name = name ? name : pet.name;
   pet.species = species ? species : pet.species;
   pet.ownerId = ownerId ? ownerId : pet.ownerId;
 
+  db.save(data);
   return pet;
+}
+
+
+const createUpdatePets = (pets, id)  => {
+  const petsToCreate = pets.filter(pet => Number.isNaN(Number(pet))).map(pet => ({ ...pet, ownerId: id }));
+  const newPets = createPets(petsToCreate);
+
+  const petsToUpdate = pets.filter(pet => !Number.isNaN(Number(pet)));
+  const updatedPets = petsToUpdate.map(pet => updatePet(pet, undefined, undefined, id));
+
+  return [
+    ...newPets,
+    updatedPets,
+  ]
 }
 
 module.exports = {
@@ -64,4 +76,5 @@ module.exports = {
   createPets,
   updatePet,
   readPetByOwnerId,
+  createUpdatePets,
 };

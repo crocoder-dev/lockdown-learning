@@ -17,7 +17,7 @@ app.route('/person')
       const result = createPeople(req.body);
       res.send(result);
     } else {
-      const result = createPerson(req.body.name, req.body.surname, req.body.age);
+      const result = createPerson(req.body.name, req.body.surname, req.body.age, req.body.pets);
       res.send(result);
     }
   });
@@ -52,7 +52,7 @@ app.route('/pet')
       const result = createPets(req.body);
       res.send(result);
     } else {
-      const result = createPet(req.body.name, req.body.species);
+      const result = createPet(req.body.name, req.body.species, req.body.ownerId);
       res.send(result);
     }
   });
