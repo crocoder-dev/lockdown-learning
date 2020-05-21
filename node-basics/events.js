@@ -1,24 +1,25 @@
 const events = require('events');
+
 const eventEmitter = new events.EventEmitter();
 
-function onConnect1() {
-   console.log('onConnect executed.');
+const listener1 = (text) => {
+  console.log(`1: Hello, ${text}!`);
 }
 
-function onConnect2() {
-   console.log('onConnect2 executed.');
-}
+eventEmitter.on('hello', listener1);
 
-eventEmitter.addListener('connection', onConnect1);
+eventEmitter.on('hello', (text) => {
+  console.log(`2: Hello, ${text}!`);
+});
 
-eventEmitter.on('connection', onConnect2);
 
-console.log(events.EventEmitter.listenerCount(eventEmitter,'connection'));
+console.log(events.EventEmitter.listenerCount(eventEmitter, 'hello'));
 
-eventEmitter.emit('connection');
+eventEmitter.emit('hello', 'David');
 
-eventEmitter.removeListener('connection', onConnect1);
+eventEmitter.removeListener('hello', listener1);
 
-eventEmitter.emit('connection');
 
-console.log(events.EventEmitter.listenerCount(eventEmitter,'connection'));
+console.log(events.EventEmitter.listenerCount(eventEmitter, 'hello'));
+
+eventEmitter.emit('hello', 'David');

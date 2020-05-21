@@ -4,7 +4,7 @@
   "description": "",
   "main": "data.js",
   "scripts": {
-    "start:server": "json-server ./data.json",
+    "start:server": "json-server --watch ./data.json",
     "start:client": "parcel index.html",
     "start": "npm run start:server & npm run start:client"
   },

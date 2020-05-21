@@ -1,27 +1,6 @@
 {
   "pokemon": [
     {
-      "id": 1,
-      "name": {
-        "english": "Bulbasaur",
-        "japanese": "フシギダネ",
-        "chinese": "妙蛙种子",
-        "french": "Bulbizarre"
-      },
-      "type": [
-        "Grass",
-        "Poison"
-      ],
-      "base": {
-        "HP": 45,
-        "Attack": 49,
-        "Defense": 49,
-        "Sp. Attack": 65,
-        "Sp. Defense": 65,
-        "Speed": 45
-      }
-    },
-    {
       "id": 2,
       "name": {
         "english": "Ivysaur",
@@ -81,26 +60,6 @@
         "Sp. Attack": 60,
         "Sp. Defense": 50,
         "Speed": 65
-      }
-    },
-    {
-      "id": 5,
-      "name": {
-        "english": "Charmeleon",
-        "japanese": "リザード",
-        "chinese": "火恐龙",
-        "french": "Reptincel"
-      },
-      "type": [
-        "Fire"
-      ],
-      "base": {
-        "HP": 58,
-        "Attack": 64,
-        "Defense": 58,
-        "Sp. Attack": 80,
-        "Sp. Defense": 65,
-        "Speed": 80
       }
     },
     {
@@ -16584,6 +16543,153 @@
         "Sp. Defense": 65,
         "Speed": 34
       }
+    },
+    {
+      "name": {
+        "english": "Bulbclone",
+        "japanese": "フシギダネ",
+        "chinese": "妙蛙种子",
+        "french": "Le Bulbclone?"
+      },
+      "type": [
+        "Grass",
+        "Poison"
+      ],
+      "base": {
+        "HP": 45,
+        "Attack": 49,
+        "Defense": 49,
+        "Sp. Attack": 65,
+        "Sp. Defense": 65,
+        "Speed": 45
+      },
+      "id": 812
+    },
+    {
+      "name": {
+        "english": "Bulbclone",
+        "japanese": "フシギダネ",
+        "chinese": "妙蛙种子",
+        "french": "Le Bulbclone?"
+      },
+      "type": [
+        "Grass",
+        "Poison"
+      ],
+      "base": {
+        "HP": 45,
+        "Attack": 49,
+        "Defense": 49,
+        "Sp. Attack": 65,
+        "Sp. Defense": 65,
+        "Speed": 45
+      },
+      "id": 813
+    },
+    {
+      "name": {
+        "english": "Bulbclone",
+        "japanese": "フシギダネ",
+        "chinese": "妙蛙种子",
+        "french": "Le Bulbclone?"
+      },
+      "type": [
+        "Grass",
+        "Poison"
+      ],
+      "base": {
+        "HP": 45,
+        "Attack": 49,
+        "Defense": 49,
+        "Sp. Attack": 65,
+        "Sp. Defense": 65,
+        "Speed": 45
+      },
+      "id": 814
+    },
+    {
+      "name": {
+        "english": "Bulbclone",
+        "japanese": "フシギダネ",
+        "chinese": "妙蛙种子",
+        "french": "Le Bulbclone?"
+      },
+      "type": [
+        "Grass",
+        "Poison"
+      ],
+      "base": {
+        "HP": 45,
+        "Attack": 49,
+        "Defense": 49,
+        "Sp. Attack": 65,
+        "Sp. Defense": 65,
+        "Speed": 45
+      },
+      "id": 815
+    },
+    {
+      "name": {
+        "english": "Bulbclone",
+        "japanese": "フシギダネ",
+        "chinese": "妙蛙种子",
+        "french": "Le Bulbclone?"
+      },
+      "type": [
+        "Grass",
+        "Poison"
+      ],
+      "base": {
+        "HP": 45,
+        "Attack": 49,
+        "Defense": 49,
+        "Sp. Attack": 65,
+        "Sp. Defense": 65,
+        "Speed": 45
+      },
+      "id": 816
+    },
+    {
+      "name": {
+        "english": "Bulbclone",
+        "japanese": "フシギダネ",
+        "chinese": "妙蛙种子",
+        "french": "Le Bulbclone?"
+      },
+      "type": [
+        "Grass",
+        "Poison"
+      ],
+      "base": {
+        "HP": 45,
+        "Attack": 49,
+        "Defense": 49,
+        "Sp. Attack": 65,
+        "Sp. Defense": 65,
+        "Speed": 45
+      },
+      "id": 817
+    },
+    {
+      "name": {
+        "english": "Bulbclone",
+        "japanese": "フシギダネ",
+        "chinese": "妙蛙种子",
+        "french": "Le Bulbclone?"
+      },
+      "type": [
+        "Grass",
+        "Poison"
+      ],
+      "base": {
+        "HP": 45,
+        "Attack": 49,
+        "Defense": 49,
+        "Sp. Attack": 65,
+        "Sp. Defense": 65,
+        "Speed": 45
+      },
+      "id": 818
     }
   ]
 }
