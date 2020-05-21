@@ -1,0 +1,36 @@
+{
+  "people": {
+    "id": 0,
+    "value": [
+      {
+        "id": 1,
+        "name": "David",
+        "surname": "Abram",
+        "age": 30
+      },
+      {
+        "id": 2,
+        "name": "John",
+        "surname": "Smith",
+        "age": 35
+      }
+    ]
+  },
+  "pets": {
+    "id": 0,
+    "value": [
+      {
+        "id": 1,
+        "ownerId": 1,
+        "name": "Thor",
+        "species": "Cat"
+      },
+      {
+        "id": 2,
+        "ownerId": 1,
+        "name": "Rea",
+        "species": "Cat"
+      }
+    ]
+  }
+}
